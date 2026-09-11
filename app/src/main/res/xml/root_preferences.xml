@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Voice Settings">
+        <EditTextPreference
+            app:key="activation_name"
+            app:title="Activation Name"
+            app:summary="Default: STEVE"
+            app:defaultValue="STEVE" />
+
+        <ListPreference
+            app:key="voice_gender"
+            app:title="Voice Gender"
+            app:entries="@array/voice_gender_entries"
+            app:entryValues="@array/voice_gender_values"
+            app:defaultValue="male" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Security">
+        <SwitchPreferenceCompat
+            app:key="enable_biometric"
+            app:title="Enable Biometric"
+            app:summary="Use fingerprint for authentication" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Permissions">
+        <Preference
+            app:title="Manage Permissions"
+            app:summary="Grant necessary permissions for voice assistant" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
