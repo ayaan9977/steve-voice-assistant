@@ -1,0 +1,9 @@
+@echo off
+echo Building STEVE Voice Assistant APK...
+echo Step 1: Cleaning previous builds...
+call gradlew clean
+echo Step 2: Building release APK...
+call gradlew assembleRelease
+echo Step 3: Build complete!
+echo APK Location: app\build\outputs\apk\release\app-release.apk
+pause
